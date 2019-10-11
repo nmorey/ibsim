@@ -67,6 +67,10 @@
 
 #define IB_PORT_EXT_SPEED_SUPPORTED_MASK (1<<14)
 
+#ifndef UMAD_DEV_DIR
+#define UMAD_DEV_DIR       "/dev/infiniband"
+#endif
+
 struct ib_user_mad_reg_req {
 	uint32_t id;
 	uint32_t method_mask[4];
